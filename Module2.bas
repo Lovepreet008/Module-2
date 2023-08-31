@@ -38,9 +38,9 @@ Attribute StockAnalyze.VB_ProcData.VB_Invoke_Func = " \n14"
                 
                 '2.Yearly change
                 
-                TotalClose = TotalClose + ws.Cells(i, 6).Value
-                TotalOpen = TotalOpen + ws.Cells(i, 3).Value
-                YearlyChange = TotalClose - TotalOpen
+                openvalue = ws.Cells(k, 3).Value
+                closevalue = ws.Cells(i, 6).Value
+                YearlyChange = closevalue - openvalue
                 ws.Cells(j, 10).Value = YearlyChange
                 
                 
@@ -49,11 +49,10 @@ Attribute StockAnalyze.VB_ProcData.VB_Invoke_Func = " \n14"
                 Else:
                     ws.Cells(j, 10).Interior.Color = vbGreen
                 End If
+
                 '3. Percentage change
                 
-                openvalue = ws.Cells(k, 3).Value
-                closevalue = ws.Cells(i, 6).Value
-                
+                          
                 
                 ws.Cells(j, 11).Value = ((closevalue - openvalue) / openvalue)
                 k = i + 1
