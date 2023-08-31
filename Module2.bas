@@ -1,4 +1,4 @@
-Attribute VB_Name = "Module1"
+
 Sub StockAnalyze()
 Attribute StockAnalyze.VB_ProcData.VB_Invoke_Func = " \n14"
     Dim ws As Worksheet
